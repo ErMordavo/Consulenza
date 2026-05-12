@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trust & Reliability | Hedo Consulting</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body class="bg-navy text-white">
+
+    <!-- Real-Time Indicator -->
+    <div id="realtime-indicator" class="realtime-indicator">
+        <div class="indicator-content">
+            <span id="indicator-text">🟢 3 consulenti disponibili ora</span>
+            <div class="indicator-detail" data-i18n="indicator_detail">Italia, UAE, USA, Singapore</div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav id="navbar" class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                Hedo <span class="font-light">Consulting</span>
+            </a>
+            
+            <div class="nav-links">
+                <a href="index.html#home" class="nav-link" data-i18n="nav_home">Home</a>
+                <a href="index.html#chi-siamo" class="nav-link" data-i18n="nav_about">Chi Siamo</a>
+                <a href="index.html#servizi" class="nav-link" data-i18n="nav_services">Servizi</a>
+                <a href="trust.html" class="nav-link active" data-i18n="nav_trust">Trust</a>
+                <a href="index.html#contatti" class="nav-link" data-i18n="nav_contact">Contatti</a>
+            </div>
+
+            <div class="nav-actions">
+                <button id="lang-toggle" class="lang-btn">EN</button>
+                <a href="index.html#contatti" class="btn-cta pulse" data-i18n="cta_contact">Contattaci</a>
+            </div>
+
+            <button class="mobile-menu-btn" id="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Trust Hero -->
+    <section class="trust-hero">
+        <div class="container">
+            <h1 class="playfair text-center" data-i18n="trust_hero_title">Fiducia e Trasparenza</h1>
+            <p class="text-center" data-i18n="trust_hero_subtitle">La nostra solidità è la base del vostro successo internazionale.</p>
+        </div>
+    </section>
+
+    <!-- 1. Testimonianze Video -->
+    <section class="section section-reveal">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label" data-i18n="testimonials_label">Testimonianze</span>
+                <h2 class="playfair" data-i18n="testimonials_title">Cosa dicono i nostri clienti</h2>
+            </div>
+            
+            <div class="testimonials-grid">
+                <!-- Card 1 -->
+                <div class="testimonial-card">
+                    <div class="video-placeholder">
+                        <div class="play-icon">▶</div>
+                    </div>
+                    <div class="testimonial-info">
+                        <h4 data-i18n="test1_name">Marco Valeri</h4>
+                        <p data-i18n="test1_role">CEO, TechGlobal Solutions</p>
+                        <div class="stars">★★★★★</div>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="testimonial-card">
+                    <div class="video-placeholder">
+                        <div class="play-icon">▶</div>
+                    </div>
+                    <div class="testimonial-info">
+                        <h4 data-i18n="test2_name">Sarah Jenkins</h4>
+                        <p data-i18n="test2_role">Director of Operations, FinWorld</p>
+                        <div class="stars">★★★★★</div>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="testimonial-card">
+                    <div class="video-placeholder">
+                        <div class="play-icon">▶</div>
+                    </div>
+                    <div class="testimonial-info">
+                        <h4 data-i18n="test3_name">Ahmed Al-Sayed</h4>
+                        <p data-i18n="test3_role">Investment Manager, Gulf Capital</p>
+                        <div class="stars">★★★★★</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. FAQ Section -->
+    <section class="section section-reveal bg-navy-light">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label" data-i18n="faq_label">FAQ</span>
+                <h2 class="playfair" data-i18n="faq_title">Domande Frequenti</h2>
+            </div>
+            
+            <div class="faq-accordion">
+                <!-- FAQ 1 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span data-i18n="faq1_q">Quali mercati coprite?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-i18n="faq1_a">Operiamo globalmente con focus particolare su Europa, Medio Oriente (UAE, Arabia Saudita), Nord America e i principali hub finanziari asiatici come Singapore e Hong Kong.</p>
+                    </div>
+                </div>
+                <!-- FAQ 2 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span data-i18n="faq2_q">Tempi medi di un progetto?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-i18n="faq2_a">La durata varia in base alla complessità. Un'analisi strategica può richiedere 4-6 settimane, mentre il supporto per operazioni internazionali può estendersi per diversi mesi.</p>
+                    </div>
+                </div>
+                <!-- FAQ 3 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span data-i18n="faq3_q">Come gestite la compliance?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-i18n="faq3_a">Seguiamo rigorosi standard internazionali di KYC e AML. Collaboriamo con esperti legali locali per garantire che ogni operazione rispetti le normative vigenti in ogni giurisdizione.</p>
+                    </div>
+                </div>
+                <!-- FAQ 4 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span data-i18n="faq4_q">Qual è il vostro approccio al risk management?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-i18n="faq4_a">Utilizziamo un approccio proattivo basato sull'analisi dei dati e scenari predittivi per identificare e mitigare i rischi prima che possano impattare il progetto.</p>
+                    </div>
+                </div>
+                <!-- FAQ 5 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span data-i18n="faq5_q">Lavorate con startup o solo grandi imprese?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-i18n="faq5_a">Supportiamo sia multinazionali consolidate che startup ad alto potenziale in fase di scale-up internazionale che necessitano di una struttura solida.</p>
+                    </div>
+                </div>
+                <!-- FAQ 6 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span data-i18n="faq6_q">Come misurate il ROI per i clienti?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-i18n="faq6_a">Definiamo KPI chiari all'inizio di ogni mandato. Il successo viene misurato attraverso l'ottimizzazione dei costi, la riduzione dei tempi operativi e il raggiungimento dei target di mercato.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Badge Certificazioni -->
+    <section class="section section-reveal">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label" data-i18n="badges_label">Certificazioni</span>
+                <h2 class="playfair" data-i18n="badges_title">Standard di Eccellenza</h2>
+            </div>
+            
+            <div class="badges-carousel-container">
+                <div class="badges-carousel" id="badges-carousel">
+                    <div class="badge-card" title="Information Security Management">
+                        <div class="badge-logo">ISO 27001</div>
+                        <div class="badge-tooltip" data-i18n="badge1_desc">Standard internazionale per la sicurezza delle informazioni.</div>
+                    </div>
+                    <div class="badge-card" title="Service Organization Control">
+                        <div class="badge-logo">SOC2 Type II</div>
+                        <div class="badge-tooltip" data-i18n="badge2_desc">Certificazione per la gestione sicura dei dati dei clienti.</div>
+                    </div>
+                    <div class="badge-card" title="Amazon Web Services Partner">
+                        <div class="badge-logo">Partner AWS</div>
+                        <div class="badge-tooltip" data-i18n="badge3_desc">Competenza certificata nelle soluzioni cloud globali.</div>
+                    </div>
+                    <div class="badge-card" title="International Chamber of Commerce">
+                        <div class="badge-logo">Member of ICC</div>
+                        <div class="badge-tooltip" data-i18n="badge4_desc">Membro della Camera di Commercio Internazionale.</div>
+                    </div>
+                    <div class="badge-card" title="General Data Protection Regulation">
+                        <div class="badge-logo">GDPR Compliant</div>
+                        <div class="badge-tooltip" data-i18n="badge5_desc">Piena conformità alla protezione dei dati europea.</div>
+                    </div>
+                    <div class="badge-card" title="United Nations Global Compact">
+                        <div class="badge-logo">UN Global Compact</div>
+                        <div class="badge-tooltip" data-i18n="badge6_desc">Impegno per la sostenibilità e responsabilità sociale.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">Hedo <span class="font-light">Consulting</span></div>
+                    <p data-i18n="footer_desc">Consulenza indipendente per operazioni internazionali e progetti complessi.</p>
+                    <div class="trust-badges-footer">
+                        <span class="badge-item">🔒 <span data-i18n="footer_secure">Pagamenti sicuri</span></span>
+                        <span class="badge-item">🛡️ <span data-i18n="footer_data">Dati protetti</span></span>
+                        <span class="badge-item">✅ <span data-i18n="footer_gdpr">GDPR Compliant</span></span>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4 data-i18n="footer_nav_title">Navigazione</h4>
+                    <a href="index.html#home" data-i18n="nav_home">Home</a>
+                    <a href="index.html#chi-siamo" data-i18n="nav_about">Chi Siamo</a>
+                    <a href="index.html#servizi" data-i18n="nav_services">Servizi</a>
+                    <a href="trust.html" data-i18n="nav_trust">Trust</a>
+                </div>
+                <div class="footer-contact">
+                    <h4 data-i18n="footer_contact_title">Contatti</h4>
+                    <p>128 City Road, London</p>
+                    <p>+39 376 2811814</p>
+                    <p>Info@hedogroup.co.uk</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="footer_copy">© 2025 Hedo Consulting Ltd — Tutti i diritti riservati</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
